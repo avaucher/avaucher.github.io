@@ -39,7 +39,7 @@ See list of publications [here](science.md).
 
 ## Patents
 
-* Reiher, M.; Haag, M.; Vaucher, A. 2015. Providing real-time feedback to a user from states of a model physical system via a surrogate function. EP3153937 / WO2017060113, filed Oct 5, 2015. Patent pending. 
+* Reiher, M.; Haag, M.; Vaucher, A. 2015. Providing real-time feedback to a user from states of a model physical system via a surrogate function. EP3338148B1 / WO2017060113A1. 
 
 ## Awards and Distinctions
 
