@@ -53,6 +53,10 @@ S. Amabilino, L. A. Bratholm, S. J. Bennie, A. C. Vaucher, M. Reiher, D. R. Glow
 [Training Neural Nets To Learn Reactive Potential Energy Surfaces Using Interactive Quantum Chemistry in Virtual Reality](https://pubs.acs.org/doi/10.1021/acs.jpca.9b01006),
 *J. Phys. Chem. A* **2019**, *123*, 4486-4499.
 
+A. C. Vaucher, F. Zipoli, J. Geluykens, V. H. Nair, P. Schwaller, Teodoro Laino ,
+[Automated extraction of chemical synthesis actions from experimental procedures](https://www.nature.com/articles/s41467-020-17266-6),
+*Nat. Commun.* **2020**, *11*, 3601.
+
 
 ## Talks
 
@@ -85,6 +89,11 @@ A. C. Vaucher,
 *"Computational Toolbox" Winterschool 2018: "Virtual Reality in the Natural Sciences"*,
 Engelberg, Switzerland, 
 16.02.2018.
+
+A. C. Vaucher,
+"Learning how to do chemical reactions from data", 
+*SCS Fall Meeting (online)*,
+25.08.2020.
 
 
 ## Posters (as presenter)
