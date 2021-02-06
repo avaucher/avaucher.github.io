@@ -53,9 +53,18 @@ S. Amabilino, L. A. Bratholm, S. J. Bennie, A. C. Vaucher, M. Reiher, D. R. Glow
 [Training Neural Nets To Learn Reactive Potential Energy Surfaces Using Interactive Quantum Chemistry in Virtual Reality](https://pubs.acs.org/doi/10.1021/acs.jpca.9b01006),
 *J. Phys. Chem. A* **2019**, *123*, 4486-4499.
 
-A. C. Vaucher, F. Zipoli, J. Geluykens, V. H. Nair, P. Schwaller, Teodoro Laino ,
+A. C. Vaucher, F. Zipoli, J. Geluykens, V. H. Nair, P. Schwaller, T. Laino,
 [Automated extraction of chemical synthesis actions from experimental procedures](https://www.nature.com/articles/s41467-020-17266-6),
 *Nat. Commun.* **2020**, *11*, 3601.
+
+A. C. Vaucher, P. Schwaller, T. Laino,
+[Completion of partial reaction equations](https://ml4molecules.github.io/papers2020/ML4Molecules_2020_paper_19.pdf),
+*Machine Learning for Molecules Workshop @ NeurIPS*, **2020**.
+
+P. Schwaller, D. Probst, A. C. Vaucher, V. H. Nair, D. Kreutter, T. Laino, J.-L. Reymond ,
+[Mapping the space of chemical reactions using attention-based neural networks](https://doi.org/10.1038/s42256-020-00284-w),
+*Nat. Mach. Intell.* **2021**. 
+
 
 
 ## Talks
@@ -94,6 +103,12 @@ A. C. Vaucher,
 "Learning how to do chemical reactions from data", 
 *SCS Fall Meeting (online)*,
 25.08.2020.
+
+A. C. Vaucher,
+"Completion of partial reaction equations",
+*Machine Learning for Molecules Workshop @ NeurIPS 2020 (online)*,
+12.12.2020.
+[Video link](https://slideslive.com/38942400/completion-of-partial-reaction-equations).
 
 
 ## Posters (as presenter)
