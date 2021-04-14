@@ -61,9 +61,25 @@ A. C. Vaucher, P. Schwaller, T. Laino,
 [Completion of partial reaction equations](https://ml4molecules.github.io/papers2020/ML4Molecules_2020_paper_19.pdf),
 *Machine Learning for Molecules Workshop @ NeurIPS*, **2020**.
 
+P. Schwaller, A. C. Vaucher, T. Laino, J.-L. Reymond,
+[Data augmentation strategies to improve reaction yield predictions and estimate uncertainty](https://ml4molecules.github.io/papers2020/ML4Molecules_2020_paper_21.pdf),
+*Machine Learning for Molecules Workshop @ NeurIPS*, **2020**.
+
+J. Geluykens, S. Mitrović, C.E. Ortega Vázquez, T. Laino, A. C. Vaucher, J. De Weerdt,
+[Neural Machine Translation for Conditional Generation of Novel Procedures](https://scholarspace.manoa.hawaii.edu/handle/10125/70744),
+*Proceedings of the 54th Hawaii International Conference on System Sciences* **2021**.
+
+P. Schwaller, A. C. Vaucher, T. Laino, J.-L. Reymond,
+[Prediction of chemical reaction yields using deep learning](https://iopscience.iop.org/article/10.1088/2632-2153/abc81d/meta),
+*Mach. Learn.: Sci. Technol.* **2021**, *2*, 015016.
+
 P. Schwaller, D. Probst, A. C. Vaucher, V. H. Nair, D. Kreutter, T. Laino, J.-L. Reymond ,
 [Mapping the space of chemical reactions using attention-based neural networks](https://doi.org/10.1038/s42256-020-00284-w),
 *Nat. Mach. Intell.* **2021**. 
+
+A. C. Vaucher, F. Zipoli, J. Geluykens, V. H. Nair, P. Schwaller, T. Laino,
+[Inferring Experimental Procedures from Text-Based Representations of Chemical Reactions](https://doi.org/10.26434/chemrxiv.13118423),
+*in press*.
 
 
 
@@ -110,6 +126,10 @@ A. C. Vaucher,
 12.12.2020.
 [Video link](https://slideslive.com/38942400/completion-of-partial-reaction-equations).
 
+A. C. Vaucher,
+"Learning from literature-extracted synthesis actions for organic synthesis",
+*Machine Learning and AI for Organic Chemistry @ ACS Spring 2021 (online)*,
+13.04.2021.
 
 ## Posters (as presenter)
 
@@ -143,7 +163,31 @@ A. C. Vaucher, M. Reiher
 Munich, Germany,
 2017.
 
+A. C. Vaucher, A. Cardinale, J. Geluykens, V. H. Nair, P. Schwaller, A. Toniato, F. Zipoli, T. Laino
+"Learning how to do chemical reactions from data",
+*3rd RSC-BMCS / RSC-CICAG Artificial Intelligence in Chemistry*, 
+Virtual, 
+2020.
+
+A. C. Vaucher, A. Cardinale, J. Geluykens, M. Manica, P. Schwaller, A. Sobczyk, A. Toniato, F. Zipoli, T. Laino
+"Autonomous cloud-based platform for the AI-driven synthesis of molecules",
+*Chemical Science Symposium*, 
+Virtual, 
+2020.
+
+A. C. Vaucher, P. Schwaller, T. Laino
+"Completion of partial reaction equations",
+*Machine Learning for Molecules Workshop @ NeurIPS*,
+Virtual,
+2020.
+
 <!---
+A. C. Vaucher, P. Schwaller, T. Laino
+"Completion of partial reaction equations",
+*RSCPoster Twitter Conference*,
+Virtual,
+2020.
+
 ## Posters (as co-author)
 
 M. P. Haag, A. C. Vaucher, M. Bosson, S. Redon, M. Reiher,
