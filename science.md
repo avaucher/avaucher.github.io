@@ -78,8 +78,8 @@ P. Schwaller, D. Probst, A. C. Vaucher, V. H. Nair, D. Kreutter, T. Laino, J.-L.
 *Nat. Mach. Intell.* **2021**. 
 
 A. C. Vaucher, F. Zipoli, J. Geluykens, V. H. Nair, P. Schwaller, T. Laino,
-[Inferring Experimental Procedures from Text-Based Representations of Chemical Reactions](https://doi.org/10.26434/chemrxiv.13118423),
-*in press*.
+[Inferring Experimental Procedures from Text-Based Representations of Chemical Reactions](https://doi.org/10.1038/s41467-021-22951-1),
+*Nat. Commun.* **2021**, *12*, 2573.
 
 
 
@@ -131,6 +131,16 @@ A. C. Vaucher,
 *Machine Learning and AI for Organic Chemistry @ ACS Spring 2021 (online)*,
 13.04.2021.
 
+A. C. Vaucher,
+"Inferring missing molecules in incomplete chemical equations",
+*Reactions: Representation, Planning and Robotics @ ACS Fall 2021 (online)*,
+22.08.2021.
+
+A. C. Vaucher,
+"Cloud-based AI-driven autonomous lab",
+*6th SCS-Syngenta Symposium: "Chemistry lab of the future" (online)*,
+26.11.2021.
+
 ## Posters (as presenter)
 
 A. C. Vaucher, M. P. Haag, M. Reiher,
@@ -180,6 +190,12 @@ A. C. Vaucher, P. Schwaller, T. Laino
 *Machine Learning for Molecules Workshop @ NeurIPS*,
 Virtual,
 2020.
+
+A. C. Vaucher, P. Schwaller, A. Toniato, T. Laino
+"Inferring missing molecules in incomplete chemical equations",
+*SCS Fall Meeting (online)*,
+Virtual,
+10.09.2021.
 
 <!---
 A. C. Vaucher, P. Schwaller, T. Laino
