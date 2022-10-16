@@ -81,7 +81,13 @@ A. C. Vaucher, F. Zipoli, J. Geluykens, V. H. Nair, P. Schwaller, T. Laino,
 [Inferring Experimental Procedures from Text-Based Representations of Chemical Reactions](https://doi.org/10.1038/s41467-021-22951-1),
 *Nat. Commun.* **2021**, *12*, 2573.
 
+A. Toniato, A. C. Vaucher, T. Laino,
+[Grand challenges on accelerating discovery in catalysis](https://doi.org/10.1016/j.cattod.2021.10.001),
+*Catal. Today*, **2022**, *387*, 140-142.
 
+P. Schwaller, A. C. Vaucher, R. Laplaza, C. Bunne, A. Krause, C. Corminboeuf, T. Laino,
+[Machine intelligence for chemical reaction space](https://doi.org/10.1002/wcms.1604),
+*WIREs Comput. Mol. Sci.*, **2022**, *12*, e1604.
 
 ## Talks
 
