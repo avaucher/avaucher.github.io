@@ -147,6 +147,35 @@ A. C. Vaucher,
 *6th SCS-Syngenta Symposium: "Chemistry lab of the future" (online)*,
 26.11.2021.
 
+A. C. Vaucher,
+"Human-in-the-loop for a disconneciton-aware retrosynthesis",
+*Data Science and the Chemistry Ecosystem @ ACS Spring 2022 (online)*,
+23.03.2022.
+
+A. C. Vaucher,
+"Learning from literature-extracted synthesis actions for organic synthesis",
+*Applied Machine Learning Days @ EPFL 2022*,
+Lausanne, Switzerland,
+30.03.2022.
+[Video link](https://youtu.be/Q3_zmbLIfAI).
+
+A. C. Vaucher,
+"RoboRXN, a cloud-based AI-driven autonomous robot",
+*Future Labs Live*,
+Basel, Switzerland,
+07.06.2022.
+
+A. C. Vaucher,
+"Learning how to do organic chemistry from literature-extracted synthesis actions",
+*International Symposium for Materials R&D Data (online)*,
+08.07.2022.
+
+A. C. Vaucher,
+"Combining high-quality, humanly curated data with language models: the dawn of on-demand machine learning models for digital chemistry",
+*Machine Learning and AI for Organic Chemistry @ ACS Fall 2022*,
+Chicago, IL, USA,
+24.08.2022.
+
 ## Posters (as presenter)
 
 A. C. Vaucher, M. P. Haag, M. Reiher,

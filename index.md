@@ -7,4 +7,7 @@ layout: page
 
 # About me
 
-Research Scientist in Chemistry and Machine Learning at IBM. I have a strong background in scientific computing and substantial interest in research and new technologies. 
+Staff Research Scientist in Chemistry and Machine Learning at IBM. 
+I have a strong background in computing and substantial interest in research and new technologies. 
+
+Feel free to check out my [GitHub](https://github.com/avaucher) or [Twitter](https://twitter.com/acvaucher) accounts for more details on my work.

@@ -12,7 +12,8 @@ layout: page
 
 ## Professional Experience
 
-* **Research Staff Member** (08/2019-present): IBM Research, Zurich, Switzerland
+* **Staff Research Scientist** (08/2022-present): IBM Research, Zurich, Switzerland
+* **Research Scientist** (08/2019-07/2022): IBM Research, Zurich, Switzerland
 * **Machine Learning Researcher** (10/2018-06/2019): BenevolentAI, London, United Kingdom
 * **Machine Learning Engineer** (07/2018-09/2018): BenevolentAI, London, United Kingdom
 
@@ -39,10 +40,12 @@ See list of publications [here](science.md).
 
 ## Patents
 
-* Reiher, M.; Haag, M.; Vaucher, A. 2015. Providing real-time feedback to a user from states of a model physical system via a surrogate function. EP3338148B1 / WO2017060113A1. 
+See my [Google Scholar profile](https://scholar.google.com/citations?user=fWS-rosAAAAJ&hl=en).
 
 ## Awards and Distinctions
 
+* **35 Innovators under 35** awarded by the MIT Technology Review, 2022.
+* Part of the team receiving the **Sandmeyer award** of the Swiss Chemical Society, 2022.
 * **IBM Research Prize** for Computer Modelling and Simulations in Chemistry, Biology and Material Science, 2018.
 * **ETH Medal** for an outstanding Master's thesis, 2015.
 * Holder of a **Binding scholarship**, awarded by the Sophie und Karl Binding Foundation, 2013-2015. 
@@ -59,6 +62,7 @@ See list of publications [here](science.md).
 
 ## Other
 
+* Member of the Science of Synthesis Early Career Advisory Board, 2022-present.
 * Member of the board of the Swiss Chemistry Olympiad, 2010-2018.
 * Member of the board of the Association of the Swiss Scientific Olympiads, 2015-2017.
 * Member of the Swiss Study Foundation, 2011-2018.
