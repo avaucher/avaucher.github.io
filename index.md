@@ -7,7 +7,8 @@ layout: page
 
 # About me
 
-Staff Research Scientist in Chemistry and Machine Learning at IBM. 
-I have a strong background in computing and substantial interest in research and new technologies. 
+I'm a staff research scientist at IBM Research Europe in Zurich, Switzerland. I studied Chemistry at ETH Zurich and completed my Ph.D. in the group of Markus Reiher, also at ETH Zurich, where my research concentrated on interactive approaches for quantum chemistry. After my PhD, I devoted my research to applications of artificial intelligence in chemistry, first at BenevolentAI, and then at IBM Research.
+
+I have a strong background in computing and enjoy learning about and applying new technologies. 
 
 Feel free to check out my [GitHub](https://github.com/avaucher) or [Twitter](https://twitter.com/acvaucher) accounts for more details on my work.
