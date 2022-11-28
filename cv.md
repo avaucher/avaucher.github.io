@@ -5,10 +5,12 @@ layout: page
 
 # Curriculum Vitae
 
+<!---
 ## Personal data
 
 * **Year of birth**: 1990
 * **Nationality**: Swiss
+-->
 
 ## Professional Experience
 
