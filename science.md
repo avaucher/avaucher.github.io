@@ -97,6 +97,11 @@ M. P. Haag, A. C. Vaucher, M. Bosson, S. Redon, M. Reiher,
 Chicago, IL, USA,
 24.08.2022.
 
+"Molecular Transformer-aided Biocatalysed Synthesis Planning"  
+*Summer School Biotransformations 2022*,
+Bad Herrenalb, Germany,
+15.08.2022.
+
 "Learning how to do organic chemistry from literature-extracted synthesis actions"  
 *International Symposium for Materials R&D Data (online)*,
 08.07.2022.
