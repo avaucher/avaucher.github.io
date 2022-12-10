@@ -92,6 +92,11 @@ M. P. Haag, A. C. Vaucher, M. Bosson, S. Redon, M. Reiher,
 
 ## Talks
 
+"Boosting the Adoption of AI Models for Chemical Reactivity"  
+*Collegium Helveticum workshop: "The Future of Machine Learning in Chemistry"*,
+Zurich, Switzerland,
+05.12.2022.
+
 "Combining high-quality, humanly curated data with language models: the dawn of on-demand machine learning models for digital chemistry"  
 *Machine Learning and AI for Organic Chemistry @ ACS Fall 2022*,
 Chicago, IL, USA,
