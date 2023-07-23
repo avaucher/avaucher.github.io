@@ -14,7 +14,9 @@ layout: page
 
 ## Professional Experience
 
-* **Staff Research Scientist** (08/2022 - present)  
+* **Senior Research Scientist** (05/2023 - present)  
+  IBM Research (Zurich, Switzerland)
+* **Staff Research Scientist** (08/2022 - 04/2023)  
   IBM Research (Zurich, Switzerland)
 * **Research Scientist** (08/2019 - 07/2022)  
   IBM Research (Zurich, Switzerland)
