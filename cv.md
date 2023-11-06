@@ -14,7 +14,7 @@ layout: page
 
 ## Professional Experience
 
-* **Senior Research Scientist** (05/2023 - present)  
+* **Senior Research Scientist** (05/2023 - 10/2023)  
   IBM Research (Zurich, Switzerland)
 * **Staff Research Scientist** (08/2022 - 04/2023)  
   IBM Research (Zurich, Switzerland)
@@ -75,7 +75,7 @@ See my [Google Scholar profile](https://scholar.google.com/citations?user=fWS-ro
 
 ## Other
 
-* Member of the Science of Synthesis Early Career Advisory Board, 2022-present
+* Member of the Science of Synthesis Early Career Advisory Board, 01/2022-12/2023
 * Member of the board of the Swiss Chemistry Olympiad, 2010-2018
 * Member of the board of the Association of the Swiss Scientific Olympiads, 2015-2017
 * Member of the Swiss Study Foundation, 2011-2018

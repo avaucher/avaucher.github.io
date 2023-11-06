@@ -7,7 +7,7 @@ layout: page
 
 # About me
 
-I'm a research scientist at IBM Research Europe in Zurich, Switzerland. I studied Chemistry at ETH Zurich and completed my Ph.D. in the group of Markus Reiher, also at ETH Zurich, where my research concentrated on interactive approaches for quantum chemistry. After my PhD, I devoted my research to applications of artificial intelligence in chemistry, first at BenevolentAI, and then at IBM Research.
+I studied Chemistry at ETH Zurich and completed my Ph.D. in the group of Markus Reiher, also at ETH Zurich, where my research concentrated on interactive approaches for quantum chemistry. After my PhD, I devoted my research to applications of artificial intelligence in chemistry, first at BenevolentAI, and then at IBM Research.
 
 I have a strong background in computing and enjoy learning about and applying new technologies. 
 
