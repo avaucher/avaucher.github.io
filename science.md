@@ -9,32 +9,32 @@ My full publication list can be found on [Google Scholar](https://scholar.google
 
 ## Peer-reviewed publications
 
-A. Toniato, A. C. Vaucher, M. M. Lehmann, T. Luksch, P. Schwaller, M. Stenta, T. Laino,
-[Fast Customization of Chemical Language Models to Out-of-Distribution Data Sets](https://doi.org/10.1021/acs.chemmater.3c01406),
+A. Toniato, A. C. Vaucher, M. M. Lehmann, T. Luksch, P. Schwaller, M. Stenta, T. Laino,  
+[Fast Customization of Chemical Language Models to Out-of-Distribution Data Sets](https://doi.org/10.1021/acs.chemmater.3c01406),  
 *Chem. Mater.*, **2023**, *X*, XXXX-XXXX.
 
-M. T. Cretu, A. Toniato, A. Thakkar, A. A. Debabeche, T. Laino, A. C. Vaucher,
-[Standardizing chemical compounds with language models](https://doi.org/10.1088/2632-2153/ace878),
+M. T. Cretu, A. Toniato, A. Thakkar, A. A. Debabeche, T. Laino, A. C. Vaucher,  
+[Standardizing chemical compounds with language models](https://doi.org/10.1088/2632-2153/ace878),  
 *Mach. Learn.: Sci. Technol.* **2023**, *4*, 035014.
 
-F. Bosia, P. Zheng, A. C. Vaucher, T. Weymuth, P. O. Dral, M. Reiher,
-[Ultra-fast semi-empirical quantum chemistry for high-throughput computational campaigns with Sparrow](https://doi.org/10.1063/5.0136404),
+F. Bosia, P. Zheng, A. C. Vaucher, T. Weymuth, P. O. Dral, M. Reiher,  
+[Ultra-fast semi-empirical quantum chemistry for high-throughput computational campaigns with Sparrow](https://doi.org/10.1063/5.0136404),  
 *J. Chem. Phys.*, **2023**, *158*, 054118.
 
-O. Schilter, A. C. Vaucher, P. Schwaller, T. Laino,
-[Designing catalysts with deep generative models and computational data. A case study for Suzuki cross coupling reactions](https://doi.org/10.1039/D2DD00125J),
+O. Schilter, A. C. Vaucher, P. Schwaller, T. Laino,  
+[Designing catalysts with deep generative models and computational data. A case study for Suzuki cross coupling reactions](https://doi.org/10.1039/D2DD00125J),  
 *Digital Discovery*, **2023**, *2*, 728-735.
 
-A. Toniato, J. P. Unsleber, A. C. Vaucher, T. Weymuth, D. Probst, T. Laino, M. Reiher,
-[Quantum chemical data generation as fill-in for reliability enhancement of machine-learning reaction and retrosynthesis planning](https://doi.org/10.1039/D3DD00006K),
+A. Toniato, J. P. Unsleber, A. C. Vaucher, T. Weymuth, D. Probst, T. Laino, M. Reiher,  
+[Quantum chemical data generation as fill-in for reliability enhancement of machine-learning reaction and retrosynthesis planning](https://doi.org/10.1039/D3DD00006K),  
 *Digital Discovery*, **2023**, *2*, 663-673.
 
-A. Toniato, A. C. Vaucher, P. Schwaller, T. Laino,
-[Enhancing diversity in language based models for single-step retrosynthesis](https://doi.org/10.1039/D2DD00110A),
+A. Toniato, A. C. Vaucher, P. Schwaller, T. Laino,  
+[Enhancing diversity in language based models for single-step retrosynthesis](https://doi.org/10.1039/D2DD00110A),  
 *Digital Discovery*, **2023**, *2*, 489-501.
 
-A. Thakkar, A. C. Vaucher, A. Byekwaso, P. Schwaller, A. Toniato, T. Laino, 
-[Unbiasing Retrosynthesis Language Models with Disconnection Prompts](https://doi.org/10.1021/acscentsci.3c00372),
+A. Thakkar, A. C. Vaucher, A. Byekwaso, P. Schwaller, A. Toniato, T. Laino,  
+[Unbiasing Retrosynthesis Language Models with Disconnection Prompts](https://doi.org/10.1021/acscentsci.3c00372),  
 *ACS Cent. Sci.*, **2023**, *9*, 1488-1498.
 
 P. Schwaller, A. C. Vaucher, R. Laplaza, C. Bunne, A. Krause, C. Corminboeuf, T. Laino,  
@@ -119,6 +119,11 @@ M. P. Haag, A. C. Vaucher, M. Bosson, S. Redon, M. Reiher,
 
 
 ## Talks
+
+"Advancing Chemistry with Artificial Intelligence: Challenges and Opportunities"  
+*CIC Annual Meeting @ Wissenschaftsforum Chemie 2023*,
+Leipzig, Germany, 
+05.09.2023.
 
 ["Increasing the adoption of machine learning technologies by chemists with graphical and programmatic interfaces"](https://zenodo.org/doi/10.5281/zenodo.7795640)  
 *ACS Spring 2023*,
