@@ -14,6 +14,8 @@ layout: page
 
 ## Professional Experience
 
+* **Senior Software Engineer** (01/2024 - present)  
+  Google (Zurich, Switzerland)
 * **Senior Research Scientist** (05/2023 - 10/2023)  
   IBM Research (Zurich, Switzerland)
 * **Staff Research Scientist** (08/2022 - 04/2023)  
