@@ -1,0 +1,30 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main  # Change this to your default branch
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: Set up pnpm
+        uses: pnpm/action-setup@v2
+        with:
+          version: 7
+      - run: pnpm install
+      - run: pnpm run build
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v3
+        with:
+          name: static-webpage
+          path: out
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
+        if: github.ref == 'refs/heads/main'
+        with:
+          personal_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: out
