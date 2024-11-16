@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     default: 'Alain Vaucher',
   },
   description: 'Alain Vaucher\'s webpage', 
-  metadataBase: new URL('https://next-learn-dashboard.vercel.sh'),
+  metadataBase: new URL('https://avaucher.github.io'),
 };
 
 export default function RootLayout({

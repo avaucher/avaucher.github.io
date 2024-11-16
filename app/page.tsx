@@ -2,7 +2,7 @@ import About from '@/markdown/about.mdx'
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: "About me | Alain Vaucher",  // template from layout.tsx not applied because it's in the same segment.
+  title: "Alain Vaucher's personal webpage",
 };
 
 export default function Page() {
