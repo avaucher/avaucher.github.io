@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google"
 import "./globals.css";
 import { StyledPage } from "@/app/lib/page_styling";
-import Link from "next/link";
+import NavLinks from "@/app/ui/nav-links";
 
 const inter = Inter({ subsets: ["latin"] })
 
@@ -29,10 +29,7 @@ export default function RootLayout({
           <header>
             <div className="flex items-center justify-between">
               <nav className="ml-auto text-sm font-medium space-x-6">
-                <Link href="/">About me</Link>
-                <Link href="/science">Science</Link>
-                <Link href="/cv">CV</Link>
-                <Link href="/contact">Contact</Link>
+                <NavLinks/>
               </nav>
             </div>
           </header>
