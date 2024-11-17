@@ -1,5 +1,4 @@
 import Image from "next/image";
-import Link from "next/link";
 import SocialMedia from "@/app/ui/social-media";
 
 export default function Sidebar() {
