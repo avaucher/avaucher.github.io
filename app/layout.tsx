@@ -4,6 +4,8 @@ import "./globals.css";
 import { StyledPage } from "@/app/lib/page_styling";
 import Navigation from "@/app/ui/navigation";
 import Sidebar from "@/app/ui/sidebar";
+import { GoogleAnalytics } from '@next/third-parties/google'
+
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -43,6 +45,7 @@ export default function RootLayout({
           </div>
         </div>
       </body>
+      <GoogleAnalytics gaId="G-H568MBVZZJ" />
     </html>
   );
 }
