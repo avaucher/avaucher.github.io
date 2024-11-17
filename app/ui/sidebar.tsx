@@ -1,9 +1,11 @@
 import Image from "next/image";
+import Link from "next/link";
+import SocialMedia from "@/app/ui/social-media";
 
 export default function Sidebar() {
     return (
       <>
-        <aside className="md:p-4 space-y-1 md:space-y-4 rounded flex flex-col items-center mx-auto">
+        <aside className="md:p-4 space-y-2 md:space-y-4 rounded flex flex-col items-center mx-auto">
         <div className="font-bold text-center text-2xl">Alain Vaucher</div>
         <div className="w-16 h-16 md:w-32 md:h-32 rounded-full overflow-hidden">
             <Image
@@ -14,6 +16,7 @@ export default function Sidebar() {
             className="object-cover"
             />
         </div>
+        <SocialMedia />
         </aside>
       </>
     );
