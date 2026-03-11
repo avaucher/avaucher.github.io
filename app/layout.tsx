@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     template: '%s | Alain Vaucher',
     default: 'Alain Vaucher',
   },
-  description: 'Alain Vaucher\'s webpage',
+  description: 'Alain Vaucher — Senior Software Engineer working on Gemini.',
   metadataBase: new URL('https://avaucher.github.io'),
 };
 
