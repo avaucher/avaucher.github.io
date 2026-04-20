@@ -54,6 +54,7 @@ export default function RootLayout({
       <body
         className={`antialiased min-h-screen bg-white dark:bg-slate-950 text-slate-900 dark:text-slate-50 ${inter.className}`}
       >
+        <a href="#main-content" className="sr-only focus:not-sr-only focus:absolute focus:p-2 focus:bg-white focus:text-black">Skip to main content</a>
         <div className="max-w-4xl mx-auto py-10 px-4 flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4">
           <div className="w-full md:w-1/4">
             <Sidebar />
@@ -63,7 +64,7 @@ export default function RootLayout({
           <div className="w-full md:w-3/4">
             <Navigation />
 
-            <main>
+            <main id="main-content">
               <StyledPage>
                 {children}
               </StyledPage>
