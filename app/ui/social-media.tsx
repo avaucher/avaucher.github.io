@@ -41,10 +41,11 @@ export default function SocialMedia() {
       <div className="flex space-x-1">
         {links.map((link) => {
           return (
-            <Link 
+            <Link
               key={link.name}
               href={link.href}
               target="_blank"
+              aria-label={link.name}
             >
               <svg 
                 className="w-full h-7 text-black dark:text-white fill-black dark:fill-white" 
