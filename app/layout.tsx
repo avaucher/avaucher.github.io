@@ -1,11 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import { StyledPage } from "@/app/lib/page_styling";
-import Navigation from "@/app/ui/navigation";
-import Sidebar from "@/app/ui/sidebar";
-import { GoogleAnalytics } from '@next/third-parties/google'
-
+import { GoogleAnalytics } from '@next/third-parties/google';
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -36,7 +32,7 @@ const jsonLd = {
     'https://x.com/acvaucher',
     'https://scholar.google.com/citations?user=fWS-rosAAAAJ',
   ],
-}
+};
 
 export default function RootLayout({
   children,
@@ -54,25 +50,9 @@ export default function RootLayout({
       <body
         className={`antialiased min-h-screen bg-white dark:bg-slate-950 text-slate-900 dark:text-slate-50 ${inter.className}`}
       >
-        <a href="#main-content" className="sr-only focus:not-sr-only focus:absolute focus:p-2 focus:bg-white focus:text-black">Skip to main content</a>
-        <div className="max-w-4xl mx-auto py-10 px-4 flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4">
-          <div className="w-full md:w-1/4">
-            <Sidebar />
-          </div>
-
-          {/* Main content area */}
-          <div className="w-full md:w-3/4">
-            <Navigation />
-
-            <main id="main-content">
-              <StyledPage>
-                {children}
-              </StyledPage>
-            </main>
-          </div>
-        </div>
+        {children}
+        <GoogleAnalytics gaId="G-H568MBVZZJ" />
       </body>
-      <GoogleAnalytics gaId="G-H568MBVZZJ" />
     </html>
   );
 }
