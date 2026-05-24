@@ -4,7 +4,7 @@ export const dynamic = 'force-static'
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const base = 'https://avaucher.github.io'
-  const routes = ['', '/cv', '/science', '/contact']
+  const routes = ['', '/cv', '/science', '/contact', '/2026-06-14-votations']
 
   return routes.map((route) => ({
     url: `${base}${route}`,
