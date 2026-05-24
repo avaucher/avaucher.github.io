@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef, useCallback } from "react";
 import Link from "next/link";
 import { BallotGroup } from "./types";
 
@@ -158,7 +158,7 @@ export default function VotationsClient({ initialData }: VotationsClientProps) {
     setTooltipCellKey(null);
   };
 
-  // Close tooltip on click outside
+  // Close tooltip on click/tap outside
   useEffect(() => {
     if (!activeTooltip) return;
 
@@ -169,13 +169,11 @@ export default function VotationsClient({ initialData }: VotationsClientProps) {
 
     const timer = setTimeout(() => {
       window.addEventListener("click", handleGlobalClick);
-      window.addEventListener("touchstart", handleGlobalClick);
     }, 10);
 
     return () => {
       clearTimeout(timer);
       window.removeEventListener("click", handleGlobalClick);
-      window.removeEventListener("touchstart", handleGlobalClick);
     };
   }, [activeTooltip]);
 
@@ -184,12 +182,18 @@ export default function VotationsClient({ initialData }: VotationsClientProps) {
     rec: { reason: string | null; url?: string },
     cellKey: string
   ) => {
+    e.stopPropagation();
     const isTooltipCurrentlyOpen = tooltipCellKey === cellKey;
 
-    if (!isTooltipCurrentlyOpen && (rec.reason || rec.url)) {
-      e.preventDefault();
-      e.stopPropagation();
+    if (isTooltipCurrentlyOpen) {
+      setActiveTooltip(null);
+      setTooltipCellKey(null);
+      // Don't preventDefault — let the <a> navigate naturally
+      return;
+    }
 
+    if (rec.reason || rec.url) {
+      e.preventDefault();
       const rect = e.currentTarget.getBoundingClientRect();
       setActiveTooltip({
         reason: rec.reason || "Keine Begründung angegeben.",
@@ -198,9 +202,6 @@ export default function VotationsClient({ initialData }: VotationsClientProps) {
         y: rect.top - 8,
       });
       setTooltipCellKey(cellKey);
-    } else {
-      setActiveTooltip(null);
-      setTooltipCellKey(null);
     }
   };
 
@@ -220,33 +221,76 @@ export default function VotationsClient({ initialData }: VotationsClientProps) {
     arrowOffset = activeTooltip.x - tooltipLeft;
   }
 
+  // Scroll-sync refs for split header/body tables
+  const headerScrollRefs = useRef<Map<string, HTMLDivElement>>(new Map());
+  const bodyScrollRefs = useRef<Map<string, HTMLDivElement>>(new Map());
+  const syncingRef = useRef(false);
+
+  const handleBodyScroll = useCallback((tableKey: string) => {
+    if (syncingRef.current) return;
+    syncingRef.current = true;
+    const body = bodyScrollRefs.current.get(tableKey);
+    const header = headerScrollRefs.current.get(tableKey);
+    if (body && header) {
+      header.scrollLeft = body.scrollLeft;
+    }
+    syncingRef.current = false;
+  }, []);
+
+  const handleHeaderScroll = useCallback((tableKey: string) => {
+    if (syncingRef.current) return;
+    syncingRef.current = true;
+    const body = bodyScrollRefs.current.get(tableKey);
+    const header = headerScrollRefs.current.get(tableKey);
+    if (body && header) {
+      body.scrollLeft = header.scrollLeft;
+    }
+    syncingRef.current = false;
+  }, []);
+
   // Render a section's table
   const renderTable = (groups: BallotGroup[], title: string) => {
     if (groups.length === 0) return null;
+
+    const tableKey = title;
 
     return (
       <div className="mb-12">
         <h2 className="text-xl font-bold text-slate-800 dark:text-slate-200 mb-4 border-l-4 border-blue-500 pl-3">
           {title}
         </h2>
-        <div className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl shadow-sm overflow-visible">
-          <div className="overflow-visible">
+        <div className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl shadow-sm">
+          {/* Sticky header — outside the body scroll container */}
+          <div
+            className="sticky top-0 z-30 overflow-x-auto overflow-y-hidden scrollbar-hide rounded-t-xl"
+            ref={(el) => { if (el) headerScrollRefs.current.set(tableKey, el); }}
+            onScroll={() => handleHeaderScroll(tableKey)}
+          >
             <table className="w-full border-separate border-spacing-0 table-fixed">
               <thead>
-                <tr className="bg-slate-50/70 dark:bg-slate-900/50">
-                  <th className="sticky top-0 left-0 bg-slate-50 dark:bg-slate-900 border-b border-r border-slate-200 dark:border-slate-800 z-30 p-2 sm:p-4 text-left font-semibold text-slate-700 dark:text-slate-300 text-xs sm:text-sm min-w-[125px] w-[125px] sm:min-w-[280px] sm:w-[320px] shadow-[2px_0_5px_-2px_rgba(0,0,0,0.05)]">
+                <tr className="bg-slate-50 dark:bg-slate-900">
+                  <th className="sticky left-0 bg-slate-50 dark:bg-slate-900 border-b border-r border-slate-200 dark:border-slate-800 z-30 p-2 sm:p-4 text-left font-semibold text-slate-700 dark:text-slate-300 text-xs sm:text-sm min-w-[125px] w-[125px] sm:min-w-[280px] sm:w-[320px] shadow-[2px_0_5px_-2px_rgba(0,0,0,0.05)]">
                     Vorlage
                   </th>
                   {parties.map((party) => (
                     <th
                       key={party}
-                      className="sticky top-0 bg-slate-50/95 dark:bg-slate-900/95 backdrop-blur-sm z-20 w-[70px] sm:w-[85px] p-2 sm:p-4 text-center font-semibold text-slate-700 dark:text-slate-300 border-b border-slate-200 dark:border-slate-800 text-xs sm:text-sm"
+                      className="bg-slate-50 dark:bg-slate-900 z-20 w-[70px] sm:w-[85px] p-2 sm:p-4 text-center font-semibold text-slate-700 dark:text-slate-300 border-b border-slate-200 dark:border-slate-800 text-xs sm:text-sm"
                     >
                       {party}
                     </th>
                   ))}
                 </tr>
               </thead>
+            </table>
+          </div>
+          {/* Scrollable body */}
+          <div
+            className="overflow-x-auto"
+            ref={(el) => { if (el) bodyScrollRefs.current.set(tableKey, el); }}
+            onScroll={() => handleBodyScroll(tableKey)}
+          >
+            <table className="w-full border-separate border-spacing-0 table-fixed">
               <tbody>
                 {groups.flatMap((group, groupIdx) => {
                   const isBundle = group.type === "bundle";
@@ -282,6 +326,7 @@ export default function VotationsClient({ initialData }: VotationsClientProps) {
                         <td
                           className={`
                             sticky left-0 bg-clip-padding z-20 p-2 sm:p-4
+                            min-w-[125px] w-[125px] sm:min-w-[280px] sm:w-[320px]
                             border-r border-slate-200 dark:border-slate-800
                             shadow-[2px_0_5px_-2px_rgba(0,0,0,0.05)] transition-colors
                             ${rowBgClass}
@@ -334,7 +379,7 @@ export default function VotationsClient({ initialData }: VotationsClientProps) {
                             return (
                               <td
                                 key={party}
-                                className={`p-0.5 sm:p-1 text-center align-middle h-full ${bottomBorderClass}`}
+                                className={`w-[70px] sm:w-[85px] p-0.5 sm:p-1 text-center align-middle h-full ${bottomBorderClass}`}
                               >
                                 <a
                                   href={rec.url}
@@ -357,7 +402,7 @@ export default function VotationsClient({ initialData }: VotationsClientProps) {
                           return (
                             <td
                               key={party}
-                              className={`p-0.5 sm:p-1 text-center align-middle h-full ${bottomBorderClass}`}
+                              className={`w-[70px] sm:w-[85px] p-0.5 sm:p-1 text-center align-middle h-full ${bottomBorderClass}`}
                             >
                               <div
                                 className={`${baseCellClass} ${getCellStyles(
@@ -470,14 +515,28 @@ export default function VotationsClient({ initialData }: VotationsClientProps) {
             top: `${activeTooltip.y}px`,
             transform: "translate(-50%, -100%)",
           }}
-          className="z-50 w-72 bg-slate-900/95 dark:bg-slate-900/95 text-slate-100 dark:text-slate-200 text-xs rounded-xl p-3 shadow-xl border border-slate-800/80 dark:border-slate-800/80 pointer-events-none transition-all duration-150 backdrop-blur-sm"
+          className="z-50 w-72 bg-slate-900/95 dark:bg-slate-900/95 text-slate-100 dark:text-slate-200 text-xs rounded-xl shadow-xl border border-slate-800/80 dark:border-slate-800/80 transition-all duration-150 backdrop-blur-sm"
+          onClick={(e) => e.stopPropagation()}
         >
-          <div className="font-medium leading-relaxed mb-1.5">
-            {activeTooltip.reason}
-          </div>
-          {activeTooltip.url && (
-            <div className="text-[10px] text-blue-400 dark:text-blue-300 font-semibold flex items-center gap-1 mt-1 border-t border-slate-800/50 dark:border-slate-800/50 pt-1.5">
-              <span>➔ Klicken / Erneut tippen für Details</span>
+          {activeTooltip.url ? (
+            <a
+              href={activeTooltip.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block p-3"
+            >
+              <div className="font-medium leading-relaxed mb-1.5">
+                {activeTooltip.reason}
+              </div>
+              <div className="text-[10px] text-blue-400 dark:text-blue-300 font-semibold flex items-center gap-1 mt-1 border-t border-slate-800/50 dark:border-slate-800/50 pt-1.5">
+                <span>➔ Tippen für Details</span>
+              </div>
+            </a>
+          ) : (
+            <div className="p-3">
+              <div className="font-medium leading-relaxed">
+                {activeTooltip.reason}
+              </div>
             </div>
           )}
           <div
