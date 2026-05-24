@@ -76,14 +76,35 @@ export default function VotationsClient({ initialData }: VotationsClientProps) {
   const communalGroups = initialData.filter((group) => group.level === "communal");
 
   // Get localized recommendation label
-  const getRecLabel = (rec?: string | null) => {
+  const renderCellLabel = (rec?: string | null) => {
     if (!rec) return "-";
     const norm = rec.toLowerCase();
     if (norm === "ja") return "Ja";
     if (norm === "nein") return "Nein";
-    if (norm === "stimmfreigabe" || norm === "freigabe") return "Freigabe";
-    if (norm === "initiative") return "Initiative";
-    if (norm === "gegenvorschlag") return "Gegenvorschlag";
+    if (norm === "stimmfreigabe" || norm === "freigabe") {
+      return (
+        <>
+          <span className="hidden sm:inline">Freigabe</span>
+          <span className="inline sm:hidden">Frei.</span>
+        </>
+      );
+    }
+    if (norm === "initiative") {
+      return (
+        <>
+          <span className="hidden sm:inline">Initiative</span>
+          <span className="inline sm:hidden">Init.</span>
+        </>
+      );
+    }
+    if (norm === "gegenvorschlag") {
+      return (
+        <>
+          <span className="hidden sm:inline">Gegenvorschlag</span>
+          <span className="inline sm:hidden">Gegenv.</span>
+        </>
+      );
+    }
     return rec;
   };
 
@@ -208,18 +229,18 @@ export default function VotationsClient({ initialData }: VotationsClientProps) {
         <h2 className="text-xl font-bold text-slate-800 dark:text-slate-200 mb-4 border-l-4 border-blue-500 pl-3">
           {title}
         </h2>
-        <div className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl shadow-sm overflow-hidden lg:overflow-visible">
-          <div className="overflow-x-auto lg:overflow-visible">
+        <div className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl shadow-sm overflow-visible">
+          <div className="overflow-visible">
             <table className="w-full border-separate border-spacing-0 table-fixed">
               <thead>
                 <tr className="bg-slate-50/70 dark:bg-slate-900/50">
-                  <th className="sticky top-0 left-0 bg-slate-50 dark:bg-slate-900 border-b border-r border-slate-200 dark:border-slate-800 z-30 p-4 text-left font-semibold text-slate-700 dark:text-slate-300 text-sm min-w-[280px] w-[320px] shadow-[2px_0_5px_-2px_rgba(0,0,0,0.05)]">
+                  <th className="sticky top-0 left-0 bg-slate-50 dark:bg-slate-900 border-b border-r border-slate-200 dark:border-slate-800 z-30 p-2 sm:p-4 text-left font-semibold text-slate-700 dark:text-slate-300 text-xs sm:text-sm min-w-[125px] w-[125px] sm:min-w-[280px] sm:w-[320px] shadow-[2px_0_5px_-2px_rgba(0,0,0,0.05)]">
                     Vorlage
                   </th>
                   {parties.map((party) => (
                     <th
                       key={party}
-                      className="sticky top-0 bg-slate-50/95 dark:bg-slate-900/95 backdrop-blur-sm z-20 w-[85px] p-4 text-center font-semibold text-slate-700 dark:text-slate-300 border-b border-slate-200 dark:border-slate-800 text-sm"
+                      className="sticky top-0 bg-slate-50/95 dark:bg-slate-900/95 backdrop-blur-sm z-20 w-[70px] sm:w-[85px] p-2 sm:p-4 text-center font-semibold text-slate-700 dark:text-slate-300 border-b border-slate-200 dark:border-slate-800 text-xs sm:text-sm"
                     >
                       {party}
                     </th>
@@ -234,20 +255,10 @@ export default function VotationsClient({ initialData }: VotationsClientProps) {
                   // Alternating background shades for vote groups
                   const isEvenGroup = groupIdx % 2 === 0;
 
-                  // Background classes for the row
+                  // Background classes for the row and sticky cell (needs to be solid)
                   const rowBgClass = isEvenGroup
                     ? "bg-white dark:bg-slate-900"
                     : "bg-slate-100 dark:bg-slate-950";
-
-                  // Background classes for the sticky cell (needs to be solid and match the row bg)
-                  const stickyTdBgClass = isEvenGroup
-                    ? "bg-white dark:bg-slate-900 group-hover:bg-slate-50 dark:group-hover:bg-slate-800/60"
-                    : "bg-slate-100 dark:bg-slate-950 group-hover:bg-slate-200/60 dark:group-hover:bg-slate-900/60";
-
-                  // Hover class for the row
-                  const rowHoverClass = isEvenGroup
-                    ? "hover:bg-slate-50 dark:hover:bg-slate-800/20"
-                    : "hover:bg-slate-200/50 dark:hover:bg-slate-900/40";
 
                   return group.items.map((item, itemIdx) => {
                     const isLastRowInGroup = itemIdx === group.items.length - 1;
@@ -265,15 +276,15 @@ export default function VotationsClient({ initialData }: VotationsClientProps) {
                       <tr
                         key={`${group.id}-${item.subId || "single"}`}
                         className={`
-                          group transition-colors ${rowBgClass} ${rowHoverClass}
+                          group transition-colors ${rowBgClass}
                         `}
                       >
                         <td
                           className={`
-                            sticky left-0 bg-clip-padding z-10 p-4
+                            sticky left-0 bg-clip-padding z-20 p-2 sm:p-4
                             border-r border-slate-200 dark:border-slate-800
                             shadow-[2px_0_5px_-2px_rgba(0,0,0,0.05)] transition-colors
-                            ${stickyTdBgClass}
+                            ${rowBgClass}
                             ${isBundle ? "border-l-4 border-indigo-500/80 dark:border-indigo-500/50" : ""}
                             ${bottomBorderClass}
                           `}
@@ -298,18 +309,21 @@ export default function VotationsClient({ initialData }: VotationsClientProps) {
                               </span>
                             )}
                           </div>
-                          <div className="font-semibold text-slate-900 dark:text-slate-100 text-sm leading-tight mb-1">
+                          <div 
+                            lang="de"
+                            className="font-semibold text-slate-900 dark:text-slate-100 text-xs sm:text-sm leading-tight mb-1 break-words hyphens-auto"
+                          >
                             {item.itemName}
                           </div>
-                          <div className="text-xs text-slate-500 dark:text-slate-400 font-normal leading-normal">
+                          <div className="hidden sm:block text-xs text-slate-500 dark:text-slate-400 font-normal leading-normal break-words hyphens-auto">
                             {item.shortDescription}
                           </div>
                         </td>
                         {parties.map((party) => {
                           const rec = item.voteRecommendations.find((r) => r.party === party);
                           const isClickable = !!rec?.url;
-                          const cellLabel = getRecLabel(rec?.recommendation);
-                          const isLongLabel = cellLabel.length > 5;
+                          const rawRec = rec?.recommendation || "";
+                          const isLongLabel = rawRec.length > 5;
                           const textClass = isLongLabel
                             ? "text-[9.5px] leading-tight px-0.5 py-1 text-center"
                             : "text-xs";
@@ -320,7 +334,7 @@ export default function VotationsClient({ initialData }: VotationsClientProps) {
                             return (
                               <td
                                 key={party}
-                                className={`p-1 text-center align-middle h-full ${bottomBorderClass}`}
+                                className={`p-0.5 sm:p-1 text-center align-middle h-full ${bottomBorderClass}`}
                               >
                                 <a
                                   href={rec.url}
@@ -334,7 +348,7 @@ export default function VotationsClient({ initialData }: VotationsClientProps) {
                                   onMouseLeave={handleMouseLeave}
                                   onClick={(e) => handleCellClick(e, rec, `${group.id}-${item.subId || "single"}-${party}`)}
                                 >
-                                  {cellLabel}
+                                  {renderCellLabel(rec.recommendation)}
                                 </a>
                               </td>
                             );
@@ -343,7 +357,7 @@ export default function VotationsClient({ initialData }: VotationsClientProps) {
                           return (
                             <td
                               key={party}
-                              className={`p-1 text-center align-middle h-full ${bottomBorderClass}`}
+                              className={`p-0.5 sm:p-1 text-center align-middle h-full ${bottomBorderClass}`}
                             >
                               <div
                                 className={`${baseCellClass} ${getCellStyles(
@@ -358,7 +372,7 @@ export default function VotationsClient({ initialData }: VotationsClientProps) {
                                   rec ? handleCellClick(e, rec, `${group.id}-${item.subId || "single"}-${party}`) : undefined
                                 }
                               >
-                                {cellLabel}
+                                {renderCellLabel(rec?.recommendation)}
                               </div>
                             </td>
                           );
