@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import { StyledPage } from "@/app/lib/page_styling";
+import Navigation from "@/app/ui/navigation";
+import Sidebar from "@/app/ui/sidebar";
 import { GoogleAnalytics } from '@next/third-parties/google';
 
 const inter = Inter({ subsets: ["latin"] });
@@ -40,30 +43,38 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en">
       <head>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              try {
-                if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-                  document.documentElement.classList.add('dark');
-                } else {
-                  document.documentElement.classList.remove('dark');
-                }
-              } catch (_) {}
-            `,
-          }}
-        />
       </head>
       <body
         className={`antialiased min-h-screen bg-white dark:bg-slate-950 text-slate-900 dark:text-slate-50 ${inter.className}`}
       >
-        {children}
+        <a
+          href="#main-content"
+          className="sr-only focus:not-sr-only focus:absolute focus:p-2 focus:bg-white focus:text-black"
+        >
+          Skip to main content
+        </a>
+        <div className="max-w-4xl mx-auto py-10 px-4 flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4">
+          <div className="w-full md:w-1/4">
+            <Sidebar />
+          </div>
+
+          {/* Main content area */}
+          <div className="w-full md:w-3/4">
+            <Navigation />
+
+            <main id="main-content">
+              <StyledPage>
+                {children}
+              </StyledPage>
+            </main>
+          </div>
+        </div>
         <GoogleAnalytics gaId="G-H568MBVZZJ" />
       </body>
     </html>
