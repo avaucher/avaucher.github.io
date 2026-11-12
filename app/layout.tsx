@@ -15,6 +15,9 @@ export const metadata: Metadata = {
   },
   description: 'Alain Vaucher — Senior Software Engineer working on Gemini.',
   metadataBase: new URL('https://avaucher.github.io'),
+  twitter: {
+    card: 'summary',
+  },
 };
 
 const jsonLd = {
