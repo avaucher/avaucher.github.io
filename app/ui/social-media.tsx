@@ -25,7 +25,7 @@ const links = [
       href: 'https://www.linkedin.com/in/acvaucher/', 
     },
     { 
-      name: 'Twitter', 
+      name: 'X', 
       svg_path: twitter_svg_path(),
       href: 'https://x.com/acvaucher', 
     },
@@ -38,17 +38,19 @@ const links = [
 
 export default function SocialMedia() {
     return (
-      <div className="flex space-x-1">
+      <div className="flex items-center space-x-1">
         {links.map((link) => {
           return (
             <Link
               key={link.name}
               href={link.href}
               target="_blank"
+              rel="noopener noreferrer"
               aria-label={link.name}
+              className="p-1.5 rounded-full text-black hover:text-slate-600 dark:text-white dark:hover:text-slate-300 transition-colors"
             >
               <svg 
-                className="w-full h-7 text-black dark:text-white fill-black dark:fill-white" 
+                className="w-7 h-7 fill-current" 
                 xmlns="http://www.w3.org/2000/svg" 
                 viewBox="0 0 500 500">
                   <path d={link.svg_path}/>
