@@ -12,6 +12,7 @@ export default function Sidebar() {
             alt="Alain Vaucher"
             width={128}
             height={128}
+            priority
             className="object-cover"
             />
         </div>
